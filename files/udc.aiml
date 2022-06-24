@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    
+    <!--INITIAL BOT MESSAGE-->
+    <category>
+        <pattern>INITIAL BOT MESSAGE</pattern>
+        <template>Please start with Hello</template>
+    </category>
+    <!--END OF INITIAL BOT MESSAGE-->
+    
+    
+    <!--empty reply or incorect reply-->
+    <category>
+        <pattern>*</pattern>
+        <template>I did not get you! Please repeat</template>
+    </category>
+     <!--empty reply or incorect reply-->
+     
+      <!--Introduction-->
+    <category>
+        <pattern>
+            HELLO
+            
+        </pattern>
+        <template>Hello! <br/>I am javis, Whats your name.</template>
+    </category>
+    
+  <category>
+    <pattern> MY NAME IS *</pattern>
+    <template>Welcome <set name="username"><star/>!.<br/> Choose your topic.</set> 
+  
+        <button>
+            <text>Education</text>
+            <postback>EDUCATION</postback>
+        </button>
+        <button>
+            <text>Sports</text>
+            <postback>SPORTS</postback>
+        </button>
+    </template>
+
+  </category>
+  <!--Introduction-->
+  
+  
+  <!--EDUCATION-->
+  <category>
+      <pattern>EDUCATION</pattern>
+      <template>
+          Please choose!
+          <button>
+            <text>Your module details</text>
+            <postback>MODULE</postback>
+        </button>
+        <button>
+            <text>Your University</text>
+            <postback>AnswerNO</postback>
+        </button>
+          
+      </template>
+  </category>
+  <!--MODULE-->
+  <category>
+      <pattern>MODULE</pattern>
+      <template>What do you want to know about your module. </template>
+  </category>
+  <category>
+      <pattern>* MODULES * </pattern>
+      <template>In IAA there are normally six modules in each semister for bachelor, diploma, certificate and masters students.
+     <br/> which one would you like to know?
+      <button>
+          <text>bachelor</text>
+          <postback>BACHELOR</postback>
+      </button>
+      <button>
+          <text>diploma</text>
+          <postback>DIPLOMA</postback>
+      </button>
+      <button>
+          <text>certificate students</text>
+          <postback>CERTIFICATE</postback>
+      </button>
+      <button>
+          <text>masters</text>
+          <postback>MASTERS</postback>
+      </button>
+      
+      </template>
+  </category>
+  
+  <!--bachelor-->
+  <category>
+      <pattern>BACHELOR</pattern>
+      <template>
+          Which course do you desire to know?
+          <button>
+          <text>Computer science</text>
+          <postback>BCS</postback>
+      </button>
+      <button>
+          <text>finance and baking</text>
+          <postback>BFB</postback>
+          
+      </button>
+      <button>
+          <text>Information technology</text>
+          <postback>BIT</postback>
+      </button>
+          
+          
+      </template>
+  </category>
+  <!--bcs-->
+  
+  <category>
+      <pattern>BCS</pattern>
+      <template>What semister of bachelor in computer science would you limke to know?
+      <button>
+          <text>I</text>
+          <postback>BCS I</postback>
+      </button>
+      <button>
+          <text>II</text>
+          <postback>BCS II</postback>
+      </button>
+      <button>
+          <text>III</text>
+          <postback>BCS III</postback>
+      </button>
+      <button>
+          <text>IV</text>
+          <postback>BCS IV</postback>
+      </button>
+      
+      </template>
+  </category>
+
+  <!--BCS I-->
+  <category>
+      <pattern>BCS I</pattern>
+      <template>
+          In semister I of bachelor in computer science there are six modules;<br/>
+          1:Business communication ITU07101<br/>
+          2:Computer Systems Architecture ITU07104<br/>
+          3:Foundation of Analysis ITU07107<br/>
+          4:Computer Fundamentals ITU07103 <br/>
+          5:Database Systems ITU07105 <br/>
+          6:Business Computer Applications ITU07102 <br/>
+      </template>
+  </category>
+  <!--END BCS I-->
+
+  <!--BCS II-->
+  <category>
+    <pattern>BCS II</pattern>
+    <template>
+        In semister I of bachelor in computer science there are six modules;<br/>
+        1:Principles of Programming ITU07212<br/>
+        2:Probability and Statistics ITU07213 <br/>
+        3:Discrete Mathematics ITU07210 <br/>
+        4:Computer Networking ITU07208 <br/><br/>
+        5:Development Perspectives ITU07209 <br/>
+        6:Computer Graphics Design ITU07211 <br/>
+   
+    </template>
+</category>
+<!--END BCS II-->
+
+<!--BCS III-->
+<category>
+    <pattern>BCS III</pattern>
+    <template>
+        In semister I of bachelor in computer science there are six modules;<br/>
+        1:Artificial Intelligence<br/>
+        2:Internet Programming and Applications<br/>
+        3:Information Security<br/>
+        4:Entrepreneurship<br/>
+        5:System Analysis and Design<br/>
+        6:Wireless Communication<br/>
+
+    </template>
+</category>>
+   <!-- END BCS III-->
+
+   <!--BFB-->
+   <category>
+    <pattern>BFB</pattern>
+    <template>
+        In semister I of bachelor in Finance and Banking there are six modules;
+   
+    </template>
+</category>>
+
+
+
+   <!--END BFB-->
+
+  <!--bachelor-->
+  
+  <!--MODULE-->
+  
+  
+  <!--EDUCATION-->
+  
+    <category>
+    <pattern>AM FINE</pattern>
+
+    <template>how may I help you today.</template>
+  </category>
+<category>
+    <pattern>WHAT IS YOUR NAME</pattern>
+    <template>MY name javis, Am here to assist you. What's yours</template>
+</category>
+<category>
+    <pattern>* LANGUAGE *</pattern>
+    <template>Am designed using AIML(Artificial Intelligence Modelling Language)</template>
+</category>
+
+
+
+</aiml>
